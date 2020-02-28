@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>LED Status</title>
+</head>
+
+<body>
+	<h1>Led Status</h1>
+
+	<p>
+	led  status = {{ state }}
+	{% if state == "on" %}
+		is currently on (<a href="/ledoff">turn off</a>)
+	{% else %}
+		is currently off (<a href="/ledon">turn on</a>)
+	{% endif %}
+	</p>	
+
+	{% if msg %}
+	<h2>{{ msg }}</h2>
+	{% endif %}
+
+</body>
+</html>
+
